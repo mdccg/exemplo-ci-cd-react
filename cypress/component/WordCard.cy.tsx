@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
-import WordCard from '.'
-import FontStyles from '../../assets/fonts/fonts'
-import { Word } from '../../models/Word'
+import WordCard from '../../src/components/WordCard'
+import FontStyles from '../../src/assets/fonts/fonts'
+import { Word } from '../../src/models/Word'
 
 describe('<WordCard />', () => {
   it('should render word info correctly', () => {
