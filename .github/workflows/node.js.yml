@@ -26,6 +26,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+          
+      # É invenção do Sidney
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn build
 
       - name: Run tests
         uses: cypress-io/github-actions@5
