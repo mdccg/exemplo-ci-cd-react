@@ -29,6 +29,9 @@ Este foi o sétimo repositório de código apresentado no [Curso Superior de TSI
 | Linguagem de programação | [TypeScript](https://www.typescriptlang.org/) |
 | Biblioteca de interface de usuário | [React](https://reactjs.org/) |
 | Empacotador de módulos | [create-react-app](https://create-react-app.dev/) |
+| Framework de teste | [Cypress](https://www.cypress.io/) |
+| Hospedagem | [Vercel](https://vercel.com/) |
+| Fluxo de integração contínua | Node.js |
 
 ## Como rodar
 
