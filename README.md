@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# exemplo-ci-cd-react
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sumário
 
-## Available Scripts
+- [exemplo-ci-cd-react](#exemplo-ci-cd-react)
+  - [Sumário](#sumário)
+  - [Motivação](#motivação)
+  - [Pilha de tecnologia](#pilha-de-tecnologia)
+  - [Como rodar](#como-rodar)
+    - [Pré-requisitos](#pré-requisitos)
+    - [Passo a passo](#passo-a-passo)
 
-In the project directory, you can run:
+## Motivação
 
-### `yarn start`
+Este app é uma demonstração do uso de integração e entrega contínuas utilizando o [workflow](./.github/workflows/node.js.yml) intitulado "Node.js" e pré-configurado pelo próprio [GitHub Actions](https://github.com/features/actions). O fluxo ouve os commits feitos na branch `main` e executa os testes de ponta a ponta e de componente contidos no diretório [`cypress/`](./cypress/). Se nenhum teste lançar uma exceção, o fluxo faz deploy do app na plataforma Vercel e disponibiliza o app em produção em seu respectivo [domínio](https://exemplo-ci-cd-react.vercel.app/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para facilitar o exemplo, foi utilizado como base o repositório [mdccg/evolved-dictionary](https://github.com/mdccg/evolved-dictionary/), o qual já contém os respectivos testes prontos e um app de exemplo para testar.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este foi o sétimo repositório de código apresentado no [Curso Superior de TSI do IFMS](https://www.ifms.edu.br/campi/campus-aquidauana/cursos/graduacao/sistemas-para-internet/sistemas-para-internet) como requisito para obtenção da nota parcial das atividades da unidade curricular Construção de Páginas Web IV.
 
-### `yarn test`
+| [&larr; Repositório anterior](https://github.com/mdccg/github-authentication-demo) | [Próximo repositório &rarr;](https://github.com/mdccg/ci-cd-anime-snap) |
+|-|-|
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pilha de tecnologia
 
-### `yarn build`
+| Papel | Tecnologia |
+|-|-|
+| Ambiente de execução | [Node](https://nodejs.org/en/) |
+| Linguagem de programação | [TypeScript](https://www.typescriptlang.org/) |
+| Biblioteca de interface de usuário | [React](https://reactjs.org/) |
+| Empacotador de módulos | [create-react-app](https://create-react-app.dev/) |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como rodar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node](https://nodejs.org/en/download/);
+- [Yarn](https://yarnpkg.com/) (opcional).
 
-### `yarn eject`
+### Passo a passo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone o repositório de código em sua máquina;
+   
+2. Abra um shell de comando de sua preferência (prompt de comando, PowerShell, terminal _etc_.);
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Instale as dependências do projeto através do seguinte comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```console
+$ npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Caso esteja utilizando o gerenciador de pacotes Yarn, execute o seguinte comando como alternativa:
 
-## Learn More
+```console
+$ yarn
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Finalmente, execute o seguinte comando para iniciar o app:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para npm:
+
+```console
+$ npm run start
+```
+
+Para Yarn:
+
+```console
+$ yarn start
+```
