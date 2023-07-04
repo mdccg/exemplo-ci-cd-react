@@ -9,7 +9,7 @@ interface WordNotFound {
 }
 
 const isInstanceOfWordNotFound = (obj: Word[] | WordNotFound) =>
-  (obj as WordNotFound).title != undefined
+  (obj as WordNotFound).title !== undefined
 
 const getWords = (jsonObj: any): Word[] | WordNotFound => {
   const { title } = jsonObj
